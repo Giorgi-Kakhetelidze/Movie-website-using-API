@@ -1,0 +1,93 @@
+@import "./variables";
+
+.carousel-section {
+  display: flex;
+  justify-content: center;
+  
+}
+.carousel {
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 8vw;
+  position: relative;
+  h1 {
+    position: absolute;
+    color: white;
+    top: 10%;
+    right: 67%;
+    font-weight: 900;
+    font-size: 3vw;
+  }
+}
+
+
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+  filter: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  
+  background-color: #F9F9F933;
+
+  color: white;
+
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: white;
+  height: 14px;
+  width: 15px;
+}
+
+.watchlist-btn {
+  position: absolute;
+  bottom: 1.5vh;
+  left: 14%;
+  button {
+    padding: 0.7vw 1.7vw;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.493);
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 1.2vw;
+    i {
+      color: white;
+      margin-right: 10%;
+    }
+  }
+}
+
+
+.watch-btn {
+  @include button-style;
+  position: absolute;
+  bottom: 1.5vh;
+  right: 14%;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .carousel {
+    width: 80%;
+    margin-left: 0;
+    .watch-btn,
+    button{
+      font-size: 2vw;
+      
+    }
+  
+  }
+
+  
+
+
+}
+
+

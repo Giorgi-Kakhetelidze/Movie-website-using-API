@@ -1,0 +1,274 @@
+@import "./variables";
+
+header{
+  width: 100%;
+  z-index: 100;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 50px 0px;
+  max-width: 1650px;
+  margin: auto;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      list-style: none;
+
+      a {
+        position: relative;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        color: white;
+        font-family: "Lato", sans-serif;
+        padding: 0 10px;
+        cursor: pointer;
+
+      }
+      a:after {
+        content: "";
+        position: absolute;
+        background-color: $base-yellow-color;
+        width: 0;
+        height: 3px;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+      }
+      a:hover{
+        color: $base-yellow-color;
+      }
+      a:hover:after {
+        width: 100%;
+        color: $base-yellow-color;
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.shape-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+.logo {
+  margin: 0 auto 0 0;
+}
+
+.search-box {
+  position: relative;
+  max-width: 240px;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+  padding: 8px 20px;
+  background-color: rgb(46, 49, 63);
+  border-radius: 1rem;
+  margin-top: -10px;
+  input {
+    height: 50px;
+    width: 80%;
+  }
+  .search-icon {
+    cursor: pointer;
+    
+  }
+}
+
+#search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.3rem;
+}
+
+.search-box.deactive {
+  visibility: hidden;
+}
+
+.middle-part {
+  width: 30vw;
+  font-size: 1.4rem;
+
+}
+
+.off-screen-menu {
+  text-align: center;
+  display: none;
+  background-color: rgb(15, 15, 24);
+  height: 30vh;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  transition: .3s ease;
+  padding: 10px;
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.off-screen-menu.active {
+  display: flex;
+  top: 0;
+  right: 0;
+  height: 35vh;
+  width: 27vw;
+  z-index: 200;
+  justify-content: center;
+  line-height: 8vh;
+  align-items: center;
+  text-align: center;
+  ul {
+    padding-left: 0;
+    a{
+      font-size: 3vw;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  width: 40%;
+  top: 0;
+}
+
+.nav2 {
+  padding: 0.5rem;
+  display: flex;
+  background-color: rgb(0, 0, 0)(201, 201, 201);
+  .ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    span {
+      height: 16%;
+      width: 100%;
+      background-color: rgb(210, 210, 210);
+      border-radius: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      transition: .3s ease;
+    }
+  }
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+
+}
+
+
+.inpt {
+  border: none;
+  background-color: rgb(46, 49, 63);
+  outline: none; 
+  color: white;
+}
+
+.inpt[type="text"] {
+  background-color: #f0f0f0; 
+  padding: 10px; 
+}
+
+*, ::after, ::before {
+  box-sizing: content-box;
+}
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+  .burger {
+    display: block;
+  }
+  .middle-part {
+    display: none;
+  }
+
+  .shape-icon {
+    display: none;
+  }
+}
+    
+@media only screen and (max-width: 600px) {
+  
+  .off-screen-menu.active {
+    width: 39%;
+    a {
+      font-size: 30px;
+    }
+  }
+  .search-icon {
+    width: 1.2rem;
+  }
+  #search-input {
+    font-size: 0.8rem;
+    width: 3.7rem;
+  }
+  .shape-icon {
+    width: 1.2rem;
+  }
+  .nav2 {
+    .ham-menu {
+      height: 35px;
+      margin-right: 2vw;
+    }
+  }
+  
+  .search-box {
+    width: 45vw;
+  }
+
+  .logo {
+    width: 40vw;
+  }
+  .nav2 .ham-menu {
+    width: 30px;
+  }
+
+  .off-screen-menu.active {
+    width: 22vw;
+    position: absolute;
+  }
+}

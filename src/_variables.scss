@@ -1,0 +1,22 @@
+
+$base-yellow-color: rgb(237, 165, 22);
+
+
+@mixin button-style {
+  border: none;
+  padding: 0.7vw 1.2vw;
+  margin-bottom: 0.5vh;
+  border-radius: 0.7vw;
+  background-color: $base-yellow-color;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2vw;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@mixin little-button-style {
+  @include button-style;
+  font-size: 100%;
+}
+

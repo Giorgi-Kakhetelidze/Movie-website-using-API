@@ -1,0 +1,82 @@
+@import "./variables";
+
+
+aside {
+  z-index: 100;
+  position: absolute;
+  top: 37%;
+  transform: translateY(-20%);
+  left: 5%;
+  .menu-header {
+    margin-left: 27%;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    line-height: 3rem;
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      i {
+        color: white;
+      }
+    }
+    span {
+      color: white;
+      padding-left: 10%;
+      font-size: 1.3rem;
+    }
+    a:after {
+      content: "";
+      position: absolute;
+      background-color: rgb(237, 165, 22);
+      width: 2px;
+      height: 0px;
+      right: -20%;
+      transition: 0.5s;
+    }
+    a:hover{
+      color: $base-yellow-color;
+      i {
+        color: $base-yellow-color;
+      }
+      span {
+        color: $base-yellow-color;
+      }
+    }
+    a:hover:after {
+      height: 5%;
+      color: $base-yellow-color;
+    
+    }
+
+    
+  }
+
+  .Library {
+    margin-top: 20%;
+    a:hover {
+      i {
+        color: $base-yellow-color;
+      }
+    }
+  }
+}
+
+
+.background-img {
+  position: absolute;
+  top: 140px;
+  z-index: -1;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+  aside {
+    display: none;
+  }
+  
+}

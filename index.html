@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honey Movies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <!-- Fav Icon -->
+    <link rel="icon" href="images/image 1.png" type="image/x-icon" />
+
+    <!-- Font   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-div">
+          <a href="index.html">
+            <img src="/images/Logo.png" alt="Website Logo" class="logo" />
+          </a>
+        </div>
+        <div class="middle-part">
+          <ul>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">TV Shows </a></li>
+            <li><a href="#">Anime</a></li>
+          </ul>
+        </div>
+
+        <div class="burger">
+          <div class="off-screen-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">TV Shows</a></li>
+              <li><a href="#">Anime</a></li>
+            </ul>
+          </div>
+
+          <div class="nav2">
+            <div class="ham-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="search-box">
+          <img
+            src="images/Search....png"
+            alt="Search Icon"
+            class="search-icon"
+            id="search-logo"
+            onclick="navigateToSearchPage()"
+          />
+
+          <input
+            type="search"
+            placeholder="Search..."
+            id="search"
+            class="inpt"
+          />
+
+          <img src="images/Shape.png" alt="Shape Icon" class="shape-icon" />
+        </div>
+      </nav>
+    </header>
+
+    <!-- LeftSide Navbar   -->
+
+    <aside>
+      <div class="menu">
+        <span class="menu-header">Menu</span>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa fa-home" style="font-size: 30px"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-compass" style="font-size: 30px"></i>
+              <span>Discover</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-trophy" style="font-size: 30px"></i>
+              <span>Awards</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-check-circle" style="font-size: 30px"></i>
+
+              <span>Celebrities</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="Library">
+        <span class="menu-header">Library</span>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa fa-clock-o" style="font-size: 36px"></i>
+              <span>Recent</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-star-o" style="font-size: 36px"></i>
+              <span>Top Rated</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-download" style="font-size: 36px"></i>
+              <span>Downloaded</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-heart" style="font-size: 36px"></i>
+
+              <span>Playlist</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-plus-square-o" style="font-size: 1.8vw"></i>
+
+              <span>Watchlist</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-check-square" style="font-size: 36px"></i>
+
+              <span>Completed</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="Gerenal">
+        <span class="menu-header">General</span>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa fa-gear" style="font-size: 36px"></i>
+
+              <span>Settings</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-sign-out" style="font-size: 36px"></i>
+
+              <span>Log Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- bootstrap carousel  -->
+
+    <section class="carousel-section">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="images/6a6d28a323d7682cc48b6333e4d03b6b.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <h1>The Crown</h1>
+
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="images/the-walking-dead-background-o6jlk9s74l1tvcia.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/MV5BYmU2MGMyNzQtMmQ1Mi00ZjQ0LThhNDYtN2I3N2M4NTgyMDc3XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <div class="watchlist-btn">
+          <button>
+            <i class="fa fa-plus" style="font-size: 1.8vw"></i>
+            Watchlist
+          </button>
+        </div>
+
+        <button class="watch-btn">Watch Now</button>
+      </div>
+    </section>
+
+    <img src="images/Group 1.png" class="background-img" alt="" />
+
+    <section class="movies">
+      <h1 class="movies-header">Movies</h1>
+
+      <div class="movies-section">
+        <div class="movie-box">
+          <img src="images/Popular 1.png" alt="Movie image" class="movie-img" />
+
+          <div class="header">
+            <h2>Loki</h2>
+            <img src="images/Review.png" class="review" alt="Review" />
+          </div>
+
+          <div class="info">
+            <p>6 Ep</p>
+            <p>Superhero</p>
+          </div>
+
+          <div class="buttons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-square"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                class="plus"
+              />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+              />
+            </svg>
+            <button class="more-btn">More Info</button>
+          </div>
+        </div>
+
+        <div class="movie-box">
+          <img src="images/Picture.png" alt="Movie image" class="movie-img" />
+
+          <div class="header">
+            <h2>Chernobyl</h2>
+            <img src="images/Review (1).png" class="review" alt="Review" />
+          </div>
+
+          <div class="info">
+            <p>5 Ep</p>
+            <p>Superhero</p>
+          </div>
+
+          <div class="buttons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-square"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                class="plus"
+              />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+              />
+            </svg>
+            <button class="more-btn">More Info</button>
+          </div>
+        </div>
+
+        <div class="movie-box">
+          <img
+            src="images/Picture (1).png"
+            alt="Movie image"
+            class="movie-img"
+          />
+
+          <div class="header">
+            <h2>Rick and Morty</h2>
+            <img src="images/Review (1).png" class="review" alt="Review" />
+          </div>
+
+          <div class="info">
+            <p>49 Ep</p>
+            <p>Superhero</p>
+          </div>
+
+          <div class="buttons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-square"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                class="plus"
+              />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+              />
+            </svg>
+            <button class="more-btn">More Info</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-movies">
+      <h1>Top Rated Movies</h1>
+
+      <div class="cards" id="movie-card-container"></div>
+    </section>
+
+    <!-- Link To Javascript -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script src="newPage.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>

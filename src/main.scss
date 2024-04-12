@@ -1,0 +1,19 @@
+
+@import "header";
+@import "variables";
+@import "sidebar";
+@import "carousel";
+@import "movies";
+@import "topRatedMovies";
+@import "moviePage";
+@import "searchPage";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  scroll-behavior: smooth;
+  color: white;
+}

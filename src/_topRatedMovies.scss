@@ -1,0 +1,69 @@
+@import "./variables";
+
+.top-movies {
+  position: relative;
+  margin-top: 20vh;
+  width: 100%;
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  h1 {
+    margin-left: 8vw;
+  }
+  .card1 {
+    cursor: pointer;
+    margin-top: 5vh;
+    border: none;
+    height: 90%;
+    width: 360px;
+  }
+  .movie-image {
+    position: relative;
+    cursor: pointer;
+    object-fit: cover;
+    width: 100%;
+    height: 450px;
+    border-radius: 10%;
+  }
+  .review-image {
+    height: 22px;
+    bottom: 80px;
+    left: 52px;
+  }
+  .rating {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: $base-yellow-color;
+  }
+  .title {
+    bottom: 100px;
+    left: 50px;
+    font-weight: 700;
+    font-size: 2.2vw;
+    
+  } 
+  .description {
+    margin-top: 30px;
+  }
+}
+
+.img {
+  position: relative;
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 1500px) {
+  .top-movies {
+    margin-top: 10vh;
+  }
+
+}
