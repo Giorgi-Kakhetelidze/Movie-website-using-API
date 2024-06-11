@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-sass": "node-sass src/main.scss dist/css/main.css",
     "watch-sass": "npm run compile-sass -- --watch",
-    "start": "live-server"
+    "start": "live-server",
+    "build": "npm run compile-sass"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "live-server": "^1.2.1"
   }
 }
