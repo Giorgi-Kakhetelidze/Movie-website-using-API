@@ -1,7 +1,8 @@
 const hamMenu = document.querySelector(".ham-menu");
 const searchBox = document.querySelector(".search-box");
 const apiKey = "1a3a23dc";
-const baseUrl = "http://www.omdbapi.com/";
+const baseUrl = "https://www.omdbapi.com/";
+
 
 const offScreenMenu = document.querySelector(".off-screen-menu");
 
